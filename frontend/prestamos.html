@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Mis Préstamos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/api.js" defer></script>
+    <script src="js/auth.js" defer></script>
+    <script src="js/prestamos.js" defer></script>
+</head>
+
+<body class="dark">
+
+    <header class="navbar">
+        <div class="logo">📚 Biblioteca</div>
+
+        <button id="btnMenu" class="hamburger">
+            ☰
+        </button>
+
+        <nav id="navLinks">
+            <a href="index.html">Libros</a>
+            <a href="prestamos.html" class="active">Préstamos</a>
+        </nav>
+
+        <button id="btnAuth" class="btn-primary">Iniciar sesión</button>
+    </header>
+
+    <main class="container">
+        <h1>Mis préstamos</h1>
+        <section id="prestamosGrid" class="grid-libros"></section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Biblioteca Digital</p>
+    </footer>
+
+    <!-- MODAL LOGIN -->
+    <div id="authModal" class="modal hidden">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+
+            <h2 id="modalTitle">Iniciar sesión</h2>
+
+            <!-- LOGIN -->
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="Correo" />
+                <input type="password" id="loginPassword" placeholder="Contraseña" />
+                <button class="btn-primary">Ingresar</button>
+            </form>
+
+            <!-- REGISTRO -->
+            <form id="registerForm" class="hidden">
+                <input type="text" id="regNombre" placeholder="Nombre" />
+                <input type="text" id="regApellido" placeholder="Apellido" />
+                <input type="text" id="regTelefono" placeholder="Teléfono" />
+                <input type="email" id="regEmail" placeholder="Correo" />
+                <input type="password" id="regPassword" placeholder="Contraseña" />
+                <input type="password" id="regConfirmPassword" placeholder="Confirmar contraseña" />
+                <button type="submit" class="btn-primary">Registrarse</button>
+            </form>
+
+            <p class="switch">
+                <span id="switchText">¿No tienes cuenta?</span>
+                <span id="switchBtn">Regístrate</span>
+            </p>
+
+            <p id="authMsg" class="msg"></p>
+        </div>
+    </div>
+
+</body>
+
+</html>
