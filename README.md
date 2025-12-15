@@ -8,12 +8,12 @@ La aplicación permite **visualizar libros**, **registrarse**, **iniciar sesión
 
 ## 🎯 Funcionalidades principales
 
-- **Listado de libros disponibles**
-- **Registro e inicio de sesión de usuarios**
-- **Reserva de libros**
-- **Gestión de préstamos activos**
-- **Devolución de libros**
-- **Interfaz responsiva (desktop y mobile)**
+- 📖 Listado de libros disponibles
+- 👤 Registro e inicio de sesión de usuarios
+- 📚 Reserva de libros
+- 🗂️ Gestión de préstamos activos
+- 🔄 Devolución de libros
+- 📱 Interfaz responsiva (desktop y mobile)
 
 ---
 
@@ -26,7 +26,7 @@ Antes de ejecutar el proyecto, asegúrese de tener instalado:
 - **MySQL**
 - Un navegador web moderno
 
-> ⚠️ El proyecto se entrega **sin** las carpetas `node_modules` ni el archivo `.env`.
+> ⚠️ El proyecto se entrega **sin** la carpeta `node_modules` ni el archivo `.env`.
 
 ---
 
@@ -38,103 +38,96 @@ En la **raíz del proyecto**, cree un archivo llamado exactamente:
 
 .env
 
-shell
-Copiar código
-
 ### 2️⃣ Configurar el archivo `.env`
 
-Use como referencia el archivo incluido:
+Use como referencia el archivo incluido en el proyecto:
 
 .env.example
 
-yaml
-Copiar código
 
-Este archivo está **documentado** y explica qué valor colocar en cada variable:
+Este archivo se encuentra **documentado** y explica claramente qué valor colocar en cada variable:
+
 - Puerto del backend
 - Host de la base de datos
 - Puerto de MySQL
-- Usuario y contraseña
-- Nombre de la base de datos
-
-📌 El archivo `.env` **no debe subirse al repositorio**.
+- Usuario de la base de datos
+- Contraseña de la base de datos
+- Nombre de la base de datos.
 
 ---
 
 ## 🗄️ Configuración de la Base de Datos
 
-1. Cree una base de datos en MySQL (el nombre debe coincidir con `DB_NAME`).
-2. Ejecute las **querys SQL proporcionadas**:
+1. Cree una base de datos en MySQL (el nombre debe coincidir con la variable `DB_NAME` del `.env`).
+2. Ejecute las **querys SQL proporcionadas** junto al proyecto:
    - Creación de tablas
-   - Relaciones
+   - Definición de relaciones
    - Inserción de libros de ejemplo
 
-Una vez ejecutadas, la base de datos quedará lista.
+Una vez ejecutadas las querys, la base de datos quedará lista para usarse.
 
 ---
 
 ## 📦 Instalación de dependencias
 
-En la **raíz del proyecto**, ejecute:
+En la **raíz del proyecto**, ejecute el siguiente comando:
 
-```bash
 npm install
-🚀 Ejecución del Backend
-Para levantar el backend (API REST), ejecute:
 
-bash
-Copiar código
+Esto instalará todas las dependencias necesarias del backend.
+
+---
+
+## 🚀 Ejecución del Backend
+
+Para iniciar el servidor backend (API REST), ejecute:
+
 npm run dev
-El backend se iniciará por defecto en:
 
-arduino
-Copiar código
+
+Por defecto, el backend se levantará en:
+
 http://localhost:3000
-🌐 Ejecución del Frontend
-Abra otra terminal y ejecute:
 
-bash
-Copiar código
+
+---
+
+## 🌐 Ejecución del Frontend
+
+Abra **otra terminal** y navegue a la carpeta del frontend:
+
 cd frontend
-Luego, ejecute:
 
-bash
-Copiar código
+Luego ejecute:
+
 live-server
-Verá un mensaje similar a:
 
-rust
-Copiar código
+Aparecerá un mensaje similar a:
+
 Serving "frontend" at http://127.0.0.1:8080
 Ready for changes
-Copie esa URL y ábrala en el navegador.
 
-🐧 Linux y 🪟 Windows
-En Linux, live-server suele funcionar directamente.
 
-En Windows, si no funciona, puede usar:
+Copie la URL mostrada y ábrala en el navegador para acceder a la aplicación.
 
-bash
-Copiar código
+---
+
+## 🐧 Linux y 🪟 Windows
+
+- En **Linux**, `live-server` suele funcionar directamente.
+- En **Windows**, si el comando anterior no funciona, puede ejecutar:
+
 npx live-server
-El comportamiento del proyecto es el mismo en ambos sistemas.
 
-📁 Estructura general del proyecto
-go
-Copiar código
-/
-├── backend/
-├── frontend/
-├── .env.example
-├── package.json
-├── README.md
-✅ Notas finales
-El proyecto sigue el patrón MVC
 
-Se aplican principios de Programación Orientada a Objetos
+El comportamiento de la aplicación es el mismo en ambos sistemas operativos.
 
-Se utilizan middlewares para validaciones
+---
 
-La interfaz es responsiva y orientada a UX
+## ✅ Notas finales
 
-El sistema está listo para evaluación académica
+- El proyecto sigue el **patrón de arquitectura MVC**
+- Se aplican principios de **Programación Orientada a Objetos**
+- Se utilizan **middlewares** para validaciones y manejo de errores
+- La interfaz está orientada a **UX** y es totalmente responsiva
+- El sistema se encuentra **listo para evaluación académica**
